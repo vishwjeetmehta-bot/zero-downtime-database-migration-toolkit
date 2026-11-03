@@ -1,0 +1,4 @@
+*.log
+*.dump
+*.sql.bak
+.DS_Store

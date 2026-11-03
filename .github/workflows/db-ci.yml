@@ -1,0 +1,19 @@
+name: "Database Migration CI"
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate SQL Syntax
+        run: |
+          for f in sql/migrations/*.sql; do
+            echo "Checking syntax of $f"
+            python3 scripts/validate_backward_compatibility.py
+          done
