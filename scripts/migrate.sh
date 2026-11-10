@@ -17,3 +17,4 @@ flyway -url="$FLYWAY_URL" -user="$FLYWAY_USER" -password="$FLYWAY_PASSWORD" -loc
 
 echo "==> Validating post-migration health..."
 python3 scripts/validate_backward_compatibility.py
+

@@ -18,3 +18,4 @@ DROP TRIGGER IF EXISTS trg_sync_email_hash ON accounts;
 CREATE TRIGGER trg_sync_email_hash
 BEFORE INSERT OR UPDATE OF email ON accounts
 FOR EACH ROW EXECUTE FUNCTION sync_email_hash();
+

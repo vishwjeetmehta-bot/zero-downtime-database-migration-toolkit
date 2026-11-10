@@ -17,3 +17,4 @@ jobs:
             echo "Checking syntax of $f"
             python3 scripts/validate_backward_compatibility.py
           done
+

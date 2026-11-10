@@ -8,3 +8,4 @@ CREATE TABLE IF NOT EXISTS accounts (
 );
 
 CREATE INDEX IF NOT EXISTS idx_accounts_email ON accounts(email);
+
